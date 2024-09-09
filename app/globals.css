@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@font-face {
+  font-family: 'Aeonik Regular';
+  src: url('../public/Aeonik/Aeonik-Regular.otf');
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Aeonik Regular';
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
