@@ -11,6 +11,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      gridTemplateColumns: {
+        20: "repeat(30, minmax(0, 1fr))"
+      }
     },
   },
   plugins: [],
