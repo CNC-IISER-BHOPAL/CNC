@@ -1,6 +1,9 @@
+
+"use client"
+
 import { motion } from "framer-motion"
 
-const Tile = ({isGlitchy}) => {
+const Tile = ({ isGlitchy }) => {
     return (
         <motion.div
             whileHover={{
@@ -13,8 +16,8 @@ const Tile = ({isGlitchy}) => {
             }}
             // className="aspect-square bg-neutral-950 hover:border-[#2D9EE0]"
             className={`aspect-square z-[0]  ${isGlitchy ? 'bg-[#2D9EE0]/10' : ''}`}
-   
-        
+
+
         />
     )
 }

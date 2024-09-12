@@ -1,3 +1,5 @@
+"use client"
+
 import Tile from "@/components/Tile";
 
 export default function Team() {
@@ -8,10 +10,10 @@ export default function Team() {
                 <div className="bg-gradient-to-b from-[#091E3A] z-[0] pointer-events-none to-[#2D9EE0]  right-0 -top-12 w-[500px] h-[500px] blur-[2000px] absolute" />
                 <div className="bg-gradient-to-r from-[#091Eee] z-[0] pointer-events-none to-[#2D9EE0]  right-0 top-12 w-[500px] h-[500px] blur-[2000px] absolute" />
                 <section className='w-full   grid grid-cols-20 h-screen overflow-y-clip'>
-        {Array.from(Array(30 * 30), i => (
-          <Tile key={i} />
-        ))}
-      </section>
+                    {Array.from(Array(30 * 30), i => (
+                        <Tile key={i} />
+                    ))}
+                </section>
             </div>
         </>
     )
