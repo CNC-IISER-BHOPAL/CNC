@@ -44,6 +44,7 @@ body {
   z-index: 9999;
 }
 
+
 /* 
 
 neighbors = [
@@ -57,3 +58,22 @@ neighbors = [
     index+numCols+1,
     
 */
+
+
+
+h1::after {
+  content: var(--clubName);
+  display: block; /* or inline-block, depending on your layout */
+  /* transform: translateY(10%); */
+  margin-top: 10px
+}
+.hoverText h1{
+  transition: transform 300ms ease;
+}
+.hoverText:hover h1{
+  transform: translateY(-60px)
+}
+
+
+
+
