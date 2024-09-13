@@ -101,7 +101,7 @@ export const Wrapper = ({ children }) => {
   )
 }
 
-const BackgroundGrid = () => {
+export const BackgroundGrid = () => {
   const [tiles, setTiles] = useState([]);
 
   useEffect(() => {
@@ -127,14 +127,14 @@ const BackgroundGrid = () => {
 }
 
 
-const Gradients = () => {
+export const Gradients = () => {
   return (
-    <div>
+    <>
       <div className="pointer-events-none top-24 z-[0] bg-blue-700 w-[500px] h-[400px] blur-[20rem] absolute" />
       <div className="bg-gradient-to-br from-[#2f80ed] z-[0] pointer-events-none to-[#2f80ed]  right-0 -top-24 w-[500px] h-[500px] blur-[1400px] absolute" />
-      <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gradient-to-tr from-blue-400 via-blue-900 to-cyan-600 z-[0] blur-[118px]"></div>
+      <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gradient-to-tr from-blue-400 via-blue-900 to-cyan-600 z-[0] blur-[118px]" />
       {/* <div className="bg-gradient-to-r from-[#091Eee] z-[0] pointer-events-none to-[#2D9EE0]  right-24  bottom-24 w-[500px] h-[500px] blur-[1200px] absolute" /> */}
-    </div>
+    </>
   )
 }
 

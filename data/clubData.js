@@ -5,7 +5,7 @@ export const clubs = [
       clubMotto: "We Code.",
       clubCoordinators: "Vivek Kumar & Adheesh Trivedi",
       clubAbstract: "At CNC we are committed to building a professional team to work in favour of IISERB's interests. We thrive to make IISERB self-dependent and work for its betterment. We are the backbone of majority of councils/clubs at IISERB. Our core members ensure that events taking place on campus are conducted smoothly and provide the necessary resources to designated teams for proper organisation of any event.",
-      clubLink: "https://example.com",
+      clubLink: "/clubs/cyberheathens",
       clubLogo: "cc.png",
     },
     {
