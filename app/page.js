@@ -184,10 +184,15 @@ const Clubs = ({ clubName, clubMotto, clubCoordinators, clubAbstract, clubLink, 
         </p>
         {/* Know More Button */}
         <a href={clubLink} target="_blank" rel="noopener noreferrer">
-          <button className='pointer-events-auto z-[99] text-white items-center font-medium gap-2 rounded-xl flex mt-5'>
+          <motion.button 
+          whileTap={{scale: 0.9}}
+          whileHover={{scale: 1.1}}
+          className='pointer-events-auto group rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 px-4 py-2 active:bg-red-500 z-[99] text-white items-center overflow-hidden  font-medium gap-2 rounded-xl flex mt-8'>
             Know More
-            <MdArrowOutward size={20} />
-          </button>
+            <MdArrowOutward 
+            className='group-hover:translate-x-6 group-hover:-translate-y-6 transition duration-500'
+            size={20} />
+          </motion.button>
         </a>
       </div>
     </div>

@@ -19,26 +19,26 @@ export const clubs = [
     {
       clubName: "EECS Club",
       clubMotto: "We Innovate Technology.",
-      clubCoordinators: "*****",
+      clubCoordinators: "Aditya, Annamalai & Bhoomika",
       clubAbstract: "This club will represent the EECS department, offering practical knowledge through workshops, projects, and training programs in electrical engineering and computer science. It will also facilitate knowledge sharing, skill development, and networking opportunities with industry professionals.",
       clubLink: "https://example.com/claudeglass",
-      clubLogo: "https://as1.ftcdn.net/v2/jpg/02/32/90/86/1000_F_232908685_cCBLczFDwipQiw1ZiooqD0KKjObE67uY.jpg",
+      clubLogo: "eecs.png",
     },
     {
       clubName: "Resurgence",
-      clubMotto: "We Play Games.",
-      clubCoordinators: "********",
+      clubMotto: "We Unite Gamers.",
+      clubCoordinators: "Sankalp",
       clubAbstract: "Resurgence is a gaming club dedicated to all things gaming. From competitive tournaments to casual play, we strive to create a vibrant gaming community and provide an engaging environment for gamers of all levels.",
       clubLink: "https://example.com/resurgence",
       clubLogo: "gaming.png",
     },
     {
-      clubName: "The Quantitative Finance Club",
+      clubName: "Arbitrage: The Quant Club",
       clubMotto: "We Analyze, Predict and Succeed.",
-      clubCoordinators: "*****",
+      clubCoordinators: "Nakshatra & Ananya",
       clubAbstract: "Focused on quantitative finance and algorithmic trading, this club will provide educational resources, workshops, guest lectures, and hands-on trading simulations. We aim to build a strong foundation in quantitative analysis, programming, and financial modeling.",
       clubLink: "https://example.com/claudeglass",
-      clubLogo: "https://as1.ftcdn.net/v2/jpg/02/32/90/86/1000_F_232908685_cCBLczFDwipQiw1ZiooqD0KKjObE67uY.jpg",
+      clubLogo: "quant.png",
     },
   ];
   
