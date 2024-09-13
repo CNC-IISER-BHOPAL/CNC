@@ -7,7 +7,7 @@ import { useScramble } from 'use-scramble';
 import { useEffect, useState } from 'react';
 import { MdArrowOutward } from "react-icons/md";
 import { clubs } from '@/data/clubData'; // Import the club data
-import { IoArrowForward } from "react-icons/io5";
+import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
 
 
 
@@ -59,12 +59,17 @@ export default function Home() {
 
         <Ethos />
 
+      <VideoPlayer />
+
+
+
+
+
         <div className='w-full pointer-events-auto relative p-12 mt-24 '>
 
 
           <h1 className='text-6xl font-semibold text-[#2F80ED] flex items-center gap-4'>
             Clubs Under Us
-            {/* <IoArrowForward size={45} /> */}
           </h1>
 
           {clubs.map((club, index) => (
@@ -124,7 +129,7 @@ const BackgroundGrid = () => {
 
 const Gradients = () => {
   return (
-    <div className=''>
+    <div>
       <div className="pointer-events-none top-24 z-[0] bg-blue-700 w-[500px] h-[400px] blur-[20rem] absolute" />
       <div className="bg-gradient-to-br from-[#2f80ed] z-[0] pointer-events-none to-[#2f80ed]  right-0 -top-24 w-[500px] h-[500px] blur-[1400px] absolute" />
       <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gradient-to-tr from-blue-400 via-blue-900 to-cyan-600 z-[0] blur-[118px]"></div>
@@ -189,3 +194,24 @@ const Clubs = ({ clubName,clubMotto, clubCoordinators, clubAbstract, clubLink, c
 
   );
 };
+
+
+
+const VideoPlayer = () => {
+  return(
+    <div className='w-full flex relative items-center flex-col  justify-center p-12'>
+      <div className='absolute h-[200px] w-[200px] bg-blue-500 top-24 blur-[200px] rounded-full' />
+      <p className=' mb-2 mt-24 text-md text-blue-400 bg-white/20 rounded-full p-2 px-4 backdrop-blur-[10px] '>We Organize Tomorrow’s Tech Innovations Today</p>
+      <h1 className='text-7xl font-semibold  mb-12 bg-gradient-to-t from-blue-200 to-white  text-transparent bg-clip-text p-3'>Armageddon Techfest</h1>
+        <HeroVideoDialog
+        className="border-none"
+        animationStyle="from-center"
+
+        videoSrc="https://www.youtube.com/embed/y4kRHvOr5wU?si=QYeWChb7VOO42Lyv"
+        thumbnailSrc="https://i3.ytimg.com/vi/y4kRHvOr5wU/maxresdefault.jpg"
+        thumbnailAlt="Arma Trailer"
+      />
+      
+    </div>
+  )
+}

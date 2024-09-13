@@ -2,77 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 @font-face {
-  font-family: 'Aeonik Regular';
-  src: url('../public/Aeonik/Aeonik-Regular.otf');
+    font-family: 'Aeonik Regular';
+    src: url('../public/Aeonik/Aeonik-Regular.otf');
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Aeonik Regular';
+    color: var(--foreground);
+    background: var(--background);
+    font-family: 'Aeonik Regular';
 }
 
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
 }
 
 
 /* src/BlockGrid.css */
 .block-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 25px);
-  grid-auto-rows: 25px;
-  height: 100vh;
-  width: 100vw;
-  gap: 0;
-  z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 25px);
+    grid-auto-rows: 25px;
+    height: 100vh;
+    width: 100vw;
+    gap: 0;
+    z-index: 9999;
 }
 
 
 /* 
-
-neighbors = [
-    index - 1,
-    index + 1,
-    index-numCols,
-    index+numCols,
-    index-numCols-1,
-    index-numCols+1,
-    index+numCols-1,
-    index+numCols+1,
-    
-*/
+  
+  neighbors = [
+      index - 1,
+      index + 1,
+      index-numCols,
+      index+numCols,
+      index-numCols-1,
+      index-numCols+1,
+      index+numCols-1,
+      index+numCols+1,
+      
+  */
 
 
 
 h1::after {
-  content: var(--clubName);
-  display: block;
-  /* or inline-block, depending on your layout */
-  /* transform: translateY(10%); */
-  margin-top: 10px
+    content: var(--clubName);
+    display: block;
+    /* or inline-block, depending on your layout */
+    /* transform: translateY(10%); */
+    margin-top: 10px
 }
 
 .hoverText h1 {
-  transition: transform 300ms ease;
+    transition: transform 300ms ease;
 }
 
 .hoverText:hover h1 {
-  transform: translateY(-60px)
+    transform: translateY(-60px)
 }
+
+
+.videoPlayer {
+    padding: 2px;
+    box-shadow: 0 0 50px 1px rgb(10 37 84);
+    overflow: hidden;
+}
+
+.videoPlayer::before {
+    content: '';
+    width: 200%;
+    height: 200%;
+    /* border: 1px solid red; */
+    background-image: conic-gradient(rgb(37 99 235) 20deg, rgb(23 37 84) 120deg);
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    z-index: -1;
+    animation: rotate 6s infinite linear;
+}
+@keyframes rotate   {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+/* .videoPlayer::after{
+    content: '';
+    width: 100%;
+    height: 100%; 
+    background: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+} */
