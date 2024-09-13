@@ -27,13 +27,13 @@ export default function Home() {
       <Gradients />
       <BackgroundGrid />
 
-      <div className='absolute  lg:p-12 min-h-screen  lg:p-24 top-0 left-0 w-full '>
+      <div className='absolute   lg:p-12 min-h-screen  lg:p-24 top-0 left-0 w-full '>
         <div className="flex min-h-[80vh]  pointer-events-none  flex-col items-center justify-center">
           <Wrapper>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6  }}
+              transition={{ duration: 0.6 }}
               className="text-white bg-white/20 px-3 py-1 drop-shadow-lg  font-thin text-xs md:text-sm lg:text-md shadow-lg rounded-full backdrop-blur-lg font-bold">IISER Bhopal</motion.p>
           </Wrapper>
           <Wrapper>
@@ -42,7 +42,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
               className="text-5xl lg:text-8xl text-center font-bold bg-gradient-to-tr from-[#2F80ED] to-[#2D9EE0] text-transparent bg-clip-text drop-shadow-lg lg:p-4"
-    
+
             >Computer and <br />Networking Council
             </motion.h1>
           </Wrapper>
@@ -59,16 +59,16 @@ export default function Home() {
 
         <Ethos />
 
-      <VideoPlayer />
+        <VideoPlayer />
 
 
 
 
 
-        <div className='w-full pointer-events-auto relative p-12 mt-24 '>
+        <div className='w-full pointer-events-auto relative p-6 lg:p-12 mt-24 '>
 
 
-          <h1 className='text-6xl font-semibold text-[#2F80ED] flex items-center gap-4'>
+          <h1 className='text-5xl md:text-6xl font-semibold text-[#2F80ED] flex items-center gap-4'>
             Clubs Under Us
           </h1>
 
@@ -106,7 +106,7 @@ const BackgroundGrid = () => {
 
   useEffect(() => {
     const generateRandomTiles = () => {
-      return Array.from({ length: 30 * 15  }, () => Math.random() < 0.06); // 6% chance to be glitchy
+      return Array.from({ length: 30 * 15 }, () => Math.random() < 0.06); // 6% chance to be glitchy
     };
     setTiles(generateRandomTiles());
 
@@ -156,7 +156,7 @@ const Overlay = () => {
 }
 
 
-const Clubs = ({ clubName,clubMotto, clubCoordinators, clubAbstract, clubLink, clubLogo }) => {
+const Clubs = ({ clubName, clubMotto, clubCoordinators, clubAbstract, clubLink, clubLogo }) => {
   return (
 
     <div className='py-12 z-[999]   grid mt-12 pointer-events-auto  grid-cols-1 md:grid-cols-3 justify-between'>
@@ -167,19 +167,19 @@ const Clubs = ({ clubName,clubMotto, clubCoordinators, clubAbstract, clubLink, c
         className=' mx-auto h-[200px] pointer-events-auto object-cover my-auto'
       />
       <div className=' md:px-12 col-span-2'>
-        <div className='w-fit  hoverText overflow-hidden  h-[60px] md:h-[60px] '>
-        <h1 className={`text-3xl md:text-5xl font-semibold bg-gradient-to-t  from-blue-100 py-1 to-white  text-transparent bg-clip-text w-fit `}
-        style={{ "--clubName": `'${clubMotto}'` }}
-        >
-          {clubName}
-        </h1>
+        <div className='w-fit  hoverText overflow-hidden  h-[45px]  md:h-[60px] '>
+          <h1 className={`text-3xl md:text-5xl font-semibold bg-gradient-to-t  from-blue-100 py-1 to-white  text-transparent bg-clip-text w-fit `}
+            style={{ "--clubName": `'${clubMotto}'` }}
+          >
+            {clubName}
+          </h1>
         </div>
 
         <h3 className='text-sm md:text-lg text-neutral-300 flex gap-2 items-center '>
           <p className='text-blue-400 '>Coordinators:</p> {clubCoordinators}
         </h3>
         {/* Club Abstract */}
-        <p className='text-xs md:text-lg mt-6 font-thin text-neutral-400'>
+        <p className='text-xs md:text-lg mt-2 md:mt-6 font-thin text-neutral-400'>
           {clubAbstract}
         </p>
         {/* Know More Button */}
@@ -198,12 +198,12 @@ const Clubs = ({ clubName,clubMotto, clubCoordinators, clubAbstract, clubLink, c
 
 
 const VideoPlayer = () => {
-  return(
+  return (
     <div className='w-full flex relative items-center flex-col  justify-center p-12'>
       <div className='absolute h-[200px] w-[200px] bg-blue-500 top-24 blur-[200px] rounded-full' />
-      <p className=' mb-2 mt-24 text-md text-blue-400 bg-white/20 rounded-full p-2 px-4 backdrop-blur-[10px] '>We Organize Tomorrow’s Tech Innovations Today</p>
-      <h1 className='text-7xl font-semibold  mb-12 bg-gradient-to-t from-blue-200 to-white  text-transparent bg-clip-text p-3'>Armageddon Techfest</h1>
-        <HeroVideoDialog
+      <p className=' mb-2 mt-24 text-[9px] md:text-sm text-center lg:text-md text-blue-400 bg-white/20 rounded-full p-1 md:p-2 px-4 backdrop-blur-[10px] '>We Organize Tomorrow’s Tech Innovations Today</p>
+      <h1 className='text-5xl lg:text-7xl text-center font-semibold  mb-12 bg-gradient-to-t from-blue-200 to-white  text-transparent bg-clip-text p-3'>Armageddon Techfest</h1>
+      <HeroVideoDialog
         className="border-none"
         animationStyle="from-center"
 
@@ -211,7 +211,7 @@ const VideoPlayer = () => {
         thumbnailSrc="https://i3.ytimg.com/vi/y4kRHvOr5wU/maxresdefault.jpg"
         thumbnailAlt="Arma Trailer"
       />
-      
+
     </div>
   )
 }

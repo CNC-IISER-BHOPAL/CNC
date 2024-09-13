@@ -75,7 +75,7 @@ h1::after {
 }
 
 .hoverText:hover h1 {
-    transform: translateY(-60px)
+    transform: translateY(-50%)
 }
 
 
