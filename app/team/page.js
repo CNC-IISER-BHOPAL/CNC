@@ -100,8 +100,8 @@ export default function Team() {
 
 
 const variants = {
-    open: { opacity: 1 },
-    closed: { opacity: 0.7 },
+    open: { width: "95%", height: "95%" },
+    closed: { width: "12%", height: "12%" },
 }
 
 const TeamMember = ({ name, bio, social_links, designation, profile }) => {
@@ -118,26 +118,23 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
                 />
 
                 <motion.div
-                    // whileHover={{ opacity: 1 }}
-                    // initial={{ opacity: 0 }}
                     animate={dot ? "open" : "closed"}
                     variants={variants}
-                    transition={{ duration: 0.5 }}
-                    className="transition h-[95%] w-[95%] border overflow-hidden bg-blue-900/10  rounded-lg backdrop-blur-lg p-1 lg:p-2 gap-3 absolute  shadow-xl absolute flex justify-center  items-center "
+                    transition={{ duration: 0.3 }}
+                    className="transition   overflow-hidden bg-blue-900/10 rounded-sm md:rounded-lg backdrop-blur-lg p-1 lg:p-2 gap-3 absolute  shadow-xl absolute flex justify-center right-2 top-2  items-center "
                 >
                     <BsThreeDots
-                        className="cursor-pointer absolute right-2 top-2 md:size-[25px] size-[20px] drop-shadow-lg"
+                        className="cursor-pointer absolute right-0 md:right-2 top-0 md:top-2 md:size-[25px] size-[17px] drop-shadow-lg"
                         onClick={() => setDot(dot => !dot)}
                     />
                     <Links />
-
                 </motion.div>
 
             </div>
             <div className="mt-4 flex items-center justify-between">
                 <div>
                     <h1 className="text-xl lg:text-2xl font-bold mt-2">{name}</h1>
-                    <h1 className="text-md md:text-lg text-neutral-300 mt-1">{designation}</h1>
+                    <h1 className="text-sm md:text-lg text-neutral-300 mt-1">{designation}</h1>
                 </div>
             </div>
             <h1 className="font-thin text-xs md:text-sm text-neutral-400 mt-4">{bio}</h1>
@@ -146,12 +143,31 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
 }
 
 
+const Socialvariants = {
+    open: {
+        y: 0,
+        opacity: 1,
+        transition: {
+            y: { stiffness: 1000, velocity: -100 }
+        }
+    },
+    closed: {
+        y: 50,
+        opacity: 0,
+        transition: {
+            y: { stiffness: 1000 }
+        }
+    }
+};
+
 const Links = () => {
     return (
-        <div className="flex gap-4 items-center justify-center ">
+        <motion.div
+            variants={Socialvariants}
+            className="flex gap-4 absolute items-center justify-center ">
             <BiLogoGmail className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" />
             <FaLinkedinIn className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" />
             <FaGithub className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" />
-        </div>
+        </motion.div>
     )
 }
