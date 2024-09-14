@@ -25,6 +25,7 @@ export default function Team() {
                     <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-12 mt-12 ">
                         {team.map((teamMember => (
                             <TeamMember
+                                key={teamMember.name}
                                 name={teamMember.name}
                                 bio={teamMember.bio}
                                 designation={teamMember.designation}
@@ -54,17 +55,17 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
     return (
         <div className="lg:p-6   ">
             <div className="border w-fit">
-            <img
-                src={profile}
-                className=" rounded-xl"
-            />
+                <img
+                    src={profile}
+                    className=" rounded-xl"
+                />
             </div>
             <div className="mt-4 flex items-center justify-between">
                 <div>
                     <h1 className="text-xl lg:text-2xl font-bold mt-2">{name}</h1>
                     <h1 className="text-lg text-neutral-300 lg:text-lg mt-1">{designation}</h1>
                 </div>
-                
+
             </div>
             <h1 className="font-thin text-sm text-neutral-400 mt-4">{bio}</h1>
 
