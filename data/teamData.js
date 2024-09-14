@@ -58,6 +58,17 @@ export const team = [
     "designation": "Coordinator, Coding Club"
   },
   {
+    "name": "Vivek Kumar",
+    "bio": "Making real life solutions through tech. Systems programming, Python and JavaScript Developer.",
+    "profile_picture": "team/vivekkumar.jpg",
+    "social_links": {
+      "gmail": "vivek22@iiserb.ac.in",
+      "linkedin": "https://in.linkedin.com/in/vickvey",
+      "github": "vickvey"
+    },
+    "designation": "Coordinator, Coding Club"
+  },
+  {
     "name": "Nakshatra Goswami",
     "bio": "Loves integrating AI models into Financial Data.",
     "profile_picture": "team/nakshatra.jpg",
@@ -164,4 +175,74 @@ export const team = [
     },
     "designation": "Market Researcher, Core Committee"
   },
+  {
+    "name": "Anay Singh",
+    "bio": "Passionate about technology and innovation, with a focus on efficient execution and teamwork.",
+    "profile_picture": "team/anay.jpg",
+    "social_links": {
+      "gmail": "anay23@iiserb.ac.in"
+    },
+    "designation": "Execution Manager, Core Committee"
+  },
+  {
+    "name": "Aryan Kumar",
+    "bio": "A fiery tech enthusiast, driven by a passion for innovation and a determination that burns as bright as his temper.",
+    "profile_picture": "team/aryankumar.jpg",
+    "social_links": {
+      "gmail": "aryank23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/aryan-kumar-154a942a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    "designation": "Community Management Head, Outreach and Media Team"
+  },
+  
+  {
+    "name": "Prashant Gupta",
+    "bio": "Turning ideas into reality with robotics and tech. That's my style.",
+    "profile_picture": "team/prashantgupta.jpg",
+    "social_links": {
+      "gmail": "Prashant23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/prashant7579?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": "https://github.com/rebelpg"
+    },
+    "designation": "Event Manager, Core Committee"
+  },
+  {
+    "name": "Yash Maurya",
+    "bio": "I'm passionate about creating beautiful visuals that communicates.",
+    "profile_picture": "team/yashkumar.jpg",
+    "social_links": {
+      "gmail": "yashkumar23@iiserb.ac.in" 
+    },
+    "designation": "Graphic Designer, Core Committee"
+  },
+  {
+    "name": "Pranay Meshram",
+    "bio": "My role is to lead media and content creation part in the council.",
+    "profile_picture": "team/pranay.jpg",
+    "social_links": {
+      "gmail": "pranay23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/pranay-meshramiiserb",
+      "github": "https://github.com/PranMesh"
+    },
+    "designation": "Content Creation Head, Core Committee"
+  },
+  {
+    "name": "Sankalp Jangam",
+    "bio": "Exploring new experiences.",
+    "profile_picture": "team/sankalp.jpg",
+    "social_links": {
+      "gmail": ""
+    },
+    "designation": "Coordinator, Gaming Club"
+  },
+  {
+    "name": "Agolika Balasubramanian",
+    "bio": "Exploring, learning, mastering.",
+    "profile_picture": "team/agolika.jpg",
+    "social_links": {
+      "gmail": "agolika23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/agolika-bm-523b99282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    "designation": "Member, EECS Club"
+  }
 ];
