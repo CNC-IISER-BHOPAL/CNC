@@ -2,9 +2,10 @@
 export const clubs = [
     {
       clubName: "CyberHeathens",
-      clubMotto: "We Code.",
+      clubMotto: "We code to solve real world problems.",
       clubCoordinators: "Vivek Kumar & Adheesh Trivedi",
-      clubAbstract: "At CNC we are committed to building a professional team to work in favour of IISERB's interests. We thrive to make IISERB self-dependent and work for its betterment. We are the backbone of majority of councils/clubs at IISERB. Our core members ensure that events taking place on campus are conducted smoothly and provide the necessary resources to designated teams for proper organisation of any event.",
+      // clubAbstract: "At CNC we are committed to building a professional team to work in favour of IISERB's interests. We thrive to make IISERB self-dependent and work for its betterment. We are the backbone of majority of councils/clubs at IISERB. Our core members ensure that events taking place on campus are conducted smoothly and provide the necessary resources to designated teams for proper organisation of any event.",
+      clubAbstract: "The Cyberheathens aim to foster a coding culture at IISERB and promote coding accessibility so that everyone can benefit in their daily life as well as their career. We organize dev hackathons, competitive programming contests, and much more. Our motto is to make everyone technologically educated, enabling them to use coding tools for real-life solutions.",
       clubLink: "/clubs/cyberheathens",
       clubLogo: "cc.png",
     },
