@@ -1,10 +1,10 @@
 "use client"
 
 import { MoveUpRight } from 'lucide-react'
-import { easeIn, motion } from 'framer-motion'
+import { easeIn, motion, useInView } from 'framer-motion'
 import Tile from '@/components/Tile';
 import { useScramble } from 'use-scramble';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { MdArrowOutward } from "react-icons/md";
 import { clubs } from '@/data/clubData'; // Import the club data
 import HeroVideoDialog from "@/components/magicui/hero-video-dialog";
@@ -22,13 +22,16 @@ export default function Home() {
     scramble: 10,
     seed: 5,
   });
+
+  const animateref = useRef(null);
+  const animateInView = useInView(ref, { once: true });
   return (
-    <div className="  w-full     z-[2]  relative">
+    <div className="  w-full    z-[2]  relative">
       <Gradients />
       <BackgroundGrid />
 
-      <div className='absolute   lg:p-12 min-h-screen  lg:p-24 top-0 left-0 w-full '>
-        <div className="flex min-h-[80vh]  pointer-events-none  flex-col items-center justify-center">
+      <div className='absolute    lg:p-12 min-h-screen  lg:p-24 top-0 left-0 w-full '>
+        <div className="flex min-h-[80vh]   pointer-events-none  flex-col items-center justify-center">
           <Wrapper>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -65,7 +68,7 @@ export default function Home() {
 
 
 
-        <div className='w-full pointer-events-auto relative p-6 lg:p-12 mt-24 '>
+        <div className='w-full pointer-events-auto  relative p-6 lg:p-12 mt-24 '>
 
 
           <h1 className='text-5xl md:text-6xl font-semibold text-[#2F80ED] flex items-center gap-4'>
@@ -129,22 +132,30 @@ export const BackgroundGrid = () => {
 
 export const Gradients = () => {
   return (
-    <>
+    <div>
       <div className="pointer-events-none top-24 z-[0] bg-blue-700 w-[500px] h-[400px] blur-[20rem] absolute" />
       <div className="bg-gradient-to-br from-[#2f80ed] z-[0] pointer-events-none to-[#2f80ed]  right-0 -top-24 w-[500px] h-[500px] blur-[1400px] absolute" />
       <div className="absolute inset-x-0 m-auto h-80 max-w-lg bg-gradient-to-tr from-blue-400 via-blue-900 to-cyan-600 z-[0] blur-[118px]" />
       {/* <div className="bg-gradient-to-r from-[#091Eee] z-[0] pointer-events-none to-[#2D9EE0]  right-24  bottom-24 w-[500px] h-[500px] blur-[1200px] absolute" /> */}
-    </>
+    </div>
   )
 }
 
 
 const Ethos = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className='px-6 z-[10] lg:px-12 grid lg:grid-cols-2 grid-cols-1 mt-48  w-full justify-between '>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0.4 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }}
+      transition={{ duration: 0.5 }}
+      className='px-6 z-[10] lg:px-12 grid lg:grid-cols-2 grid-cols-1 mt-48  w-full justify-between '>
       <h1 className='text-4xl mb-6 text-[#2F80ED]'>Our Ethos</h1>
       <p className='col-span-1 text-neutral-300'>&quot;At CNC we are committed to building a professional team to work in favour of IISERB&apos;s interests. We thrive to make IISERB self dependent and work for its betterment. We are the backbone of majority of councils/clubs at IISERB. Our core members ensure that events taking place on campus are conducted smoothly and provide the neceesary resources to designated teams for proper organisation of any event.&quot;</p>
-    </div>
+    </motion.div>
   )
 }
 
@@ -157,9 +168,18 @@ const Overlay = () => {
 
 
 const Clubs = ({ clubName, clubMotto, clubCoordinators, clubAbstract, clubLink, clubLogo }) => {
+  
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  
   return (
 
-    <div className='py-12 z-[999]   grid mt-12 pointer-events-auto  grid-cols-1 md:grid-cols-3 justify-between'>
+    <motion.div 
+    ref={ref}
+    initial={{ opacity: 0.4 }}
+    animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 100 }}
+    transition={{ duration: 0.5 }}
+    className='py-12 z-[999]   grid mt-12 pointer-events-auto  grid-cols-1 md:grid-cols-3 justify-between'>
       {/* Club Logo */}
       <img
         src={clubLogo}
@@ -184,18 +204,18 @@ const Clubs = ({ clubName, clubMotto, clubCoordinators, clubAbstract, clubLink, 
         </p>
         {/* Know More Button */}
         <a href={clubLink} target="_blank" rel="noopener noreferrer">
-          <motion.button 
-          whileTap={{scale: 0.9}}
-          whileHover={{scale: 1.1}}
-          className='pointer-events-auto group rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 px-4 py-2 active:bg-red-500 z-[99] text-white items-center overflow-hidden  font-medium gap-2 rounded-xl flex mt-8'>
+          <motion.button
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}
+            className='pointer-events-auto group rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 px-4 py-2 active:bg-red-500 z-[99] text-white items-center overflow-hidden  font-medium gap-2 rounded-xl flex mt-8'>
             Know More
-            <MdArrowOutward 
-            className='group-hover:translate-x-6 group-hover:-translate-y-6 transition duration-500'
-            size={20} />
+            <MdArrowOutward
+              className='group-hover:translate-x-6 group-hover:-translate-y-6 transition duration-500'
+              size={20} />
           </motion.button>
         </a>
       </div>
-    </div>
+    </motion.div>
 
   );
 };
@@ -203,8 +223,17 @@ const Clubs = ({ clubName, clubMotto, clubCoordinators, clubAbstract, clubLink, 
 
 
 const VideoPlayer = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className='w-full flex relative items-center flex-col  justify-center p-12'>
+    <motion.div 
+    ref={ref}
+    initial={{ opacity: 0.4 }}
+    animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100, scale: isInView ? 1 : 0.7 }}
+    transition={{ duration: 0.5 }}
+
+    className='w-full flex relative items-center flex-col  justify-center p-12'>
       <div className='absolute h-[200px] w-[200px] bg-blue-500 top-24 blur-[200px] rounded-full' />
       <p className=' mb-2 mt-24 text-[9px] md:text-sm text-center lg:text-md text-blue-400 bg-white/20 rounded-full p-1 md:p-2 px-4 backdrop-blur-[10px] '>We Organize Tomorrow’s Tech Innovations Today</p>
       <h1 className='text-5xl lg:text-7xl text-center font-semibold  mb-12 bg-gradient-to-t from-blue-200 to-white  text-transparent bg-clip-text p-3'>Armageddon Techfest</h1>
@@ -217,6 +246,6 @@ const VideoPlayer = () => {
         thumbnailAlt="Arma Trailer"
       />
 
-    </div>
+    </motion.div>
   )
 }

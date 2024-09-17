@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     // output: 'export',
-    // basePath: '/page'
+    images: {
+        unoptimized: true
+    },
+//    basePath: '/',
+      
 };
 
 export default nextConfig;

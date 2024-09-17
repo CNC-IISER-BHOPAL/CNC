@@ -4,23 +4,23 @@
 
 
 :root {
-    --background: #ffffff;
-    --foreground: #171717;
+    --background: #0a0a0a;
+    --foreground: #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --background: #0a0a0a;
         --foreground: #ededed;
     }
-}
+} */
 
 @font-face {
     font-family: 'Aeonik Regular';
     src: url('../public/Aeonik/Aeonik-Regular.otf');
 }
 
-body {
+:root, body, html {
     color: var(--foreground);
     background: var(--background);
     font-family: 'Aeonik Regular';
@@ -97,11 +97,13 @@ h1::after {
     z-index: -1;
     animation: rotate 6s infinite linear;
 }
-@keyframes rotate   {
-    100%{
+
+@keyframes rotate {
+    100% {
         transform: rotate(-360deg);
     }
 }
+
 /* .videoPlayer::after{
     content: '';
     width: 100%;

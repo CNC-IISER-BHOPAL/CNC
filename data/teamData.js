@@ -12,6 +12,17 @@ export const team = [
     },
     "designation": "Secretary, CNC"
   },
+  {
+    "name": "Shlok Mehndiratta",
+    "bio": "...cuz the shortest path is not always the quickest one.",
+    "profile_picture": "team/shlok.jpg",
+    "social_links": {
+      "gmail": "shlokm05@gmail.com",
+      "github": "https://github.com/shlok-mehndiratta",
+      "linkedin": "https://linkedin.com/in/shlok-mehndiratta"
+    },
+    "designation": "Vice Secretary"
+  },
 
   {
     "name": "Tanishq Sharma",
@@ -89,6 +100,17 @@ export const team = [
       "linkedin": "https://www.linkedin.com/in/ananya183/"
     },
     "designation": "Founder; Coordinator, Quant Finance Club"
+  },
+  {
+    "name": "Aditya Pratap Singh",
+    "bio": "I'm Stronger, I'm Smarter, I'm Better",
+    "profile_picture": "team/aditya.jpg",
+    "social_links": {
+      "gmail": "thisisaditya.me@gmail.com",
+      "github": "https://github.com/kyuuaditya",
+      "linkedin": "https://linkedin.com/in/kyuuaditya"
+    },
+    "designation": "General Manager, Computing and Networking Council & Coordinator, EECS Club"
   },
 
   {
@@ -192,7 +214,7 @@ export const team = [
     },
     "designation": "Execution Manager, Core Committee"
   },
-  
+
   {
     "name": "Arpan Jain",
     "bio": "Tech is Life, Life is Tech",
@@ -204,7 +226,7 @@ export const team = [
     },
     "designation": "Core Committee Member"
   },
- 
+
   {
     "name": "Shubham Mohanty",
     "bio": "In a matrix of thoughts, I roam, debugging life, making it home.",
@@ -246,6 +268,18 @@ export const team = [
       "github": "https://github.com/rebelpg"
     },
     "designation": "Event Manager, Core Committee"
+  },
+
+  {
+    "name": "Sahil Pandey",
+    "bio": "Bridging creativity and technology, I manage the seamless flow of content between CNC, SAC, and allied clubs. ",
+    "profile_picture": "team/sahil.jpg",
+    "social_links": {
+      "gmail": "pandey23@iiserb.ac.in",
+      "github": "https://github.com/sahilpandey121",
+      "linkedin": "https://www.linkedin.com/in/sahilpandey12125/"
+    },
+    "designation": "Outreach and Media Team"
   }
 ];
 
