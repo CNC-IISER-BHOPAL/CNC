@@ -101,7 +101,7 @@ export default function Team() {
 
 const variants = {
     open: { width: "95%", height: "95%" },
-    closed: { width: "12%", height: "12%" },
+    closed: { width: "42px", height: "42px" },
 }
 
 const TeamMember = ({ name, bio, social_links, designation, profile }) => {
@@ -124,7 +124,7 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
                     className="transition   overflow-hidden bg-blue-900/10 rounded-sm md:rounded-lg backdrop-blur-lg p-1 lg:p-2 gap-3 absolute  shadow-xl absolute flex justify-center right-2 top-2  items-center "
                 >
                     <BsThreeDots
-                        className="cursor-pointer absolute right-0 md:right-2 top-0 md:top-2 md:size-[25px] size-[17px] drop-shadow-lg"
+                        className="cursor-pointer absolute right-2 top-2 size-[25px]  drop-shadow-lg"
                         onClick={() => setDot(dot => !dot)}
                     />
                     <Links />

@@ -101,17 +101,76 @@ export const team = [
     },
     "designation": "Coordinator, EECS Club"
   },
-  ,
   {
-    "name": "Arijit Mondal",
-    "bio": "Driven individual who focuses on results and works under pressure.",
-    "profile_picture": "team/arijitmondal.jpg",
+    "name": "Agrim Verma",
+    "bio": "🕊️",
+    "profile_picture": "team/agrimverma.jpg",
     "social_links": {
-      "gmail": "arijit22@iiserb.ac.in",
-      "github": "https://github.com/Arijit20031",
-      "linkedin": "https://www.linkedin.com/in/arijit-mandal-081361249"
+      "gmail": "agrim22@iiserb.ac.in"
     },
-    "designation": "Team Member, EECS Club"
+    "designation": "Coordinator, Photography Club"
+  },
+  {
+    "name": "Sankalp Jangam",
+    "bio": "Exploring new experiences.",
+    "profile_picture": "team/sankalp.jpg",
+    "social_links": {
+      "gmail": ""
+    },
+    "designation": "Coordinator, Gaming Club"
+  },
+  {
+    "name": "Aaradhya Pathak",
+    "bio": "AFK",
+    "profile_picture": "team/aaradhyapathak.jpg",
+    "social_links": {
+      "gmail": "aaradhya23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/aaradhya-pathak/",
+      "github": "https://github.com/aaradhyaP"
+    },
+    "designation": "Member, Outreach and Media Team"
+  },
+  {
+    "name": "Yash Maurya",
+    "bio": "I'm passionate about creating beautiful visuals that communicates.",
+    "profile_picture": "team/yashkumar.jpg",
+    "social_links": {
+      "gmail": "yashkumar23@iiserb.ac.in"
+    },
+    "designation": "Graphic Designer, Core Committee"
+  },
+  {
+    "name": "Pranay Meshram",
+    "bio": "My role is to lead media and content creation part in the council.",
+    "profile_picture": "team/pranay.jpg",
+    "social_links": {
+      "gmail": "pranay23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/pranay-meshramiiserb",
+      "github": "https://github.com/PranMesh"
+    },
+    "designation": "Content Creation Head, Core Committee"
+  },
+  {
+    "name": "Snehapriya Thiagarajan",
+    "bio": "Chill and fun loving person curious to explore new stuff",
+    "profile_picture": "team/snehapriya.jpg",
+    "social_links": {
+      "gmail": "snehapriya23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/snehapriya-thiagarajan-9b5016286"
+    },
+    "designation": "Event Manager, Core Committee"
+  },
+
+  {
+    "name": "Sankul Rahate",
+    "bio": "I am Sankul Rahate, The Social Media Artist !! Be it Instagram or be it Pinterest, I'll reach out to everywhere !!",
+    "profile_picture": "team/sankul.jpg",
+    "social_links": {
+      "gmail": "rahate.sankul13@gmail.com",
+      "linkedin": "https://www.linkedin.com/in/sankul-rahate-716046227?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+      "github": "https://github.com/Sankul13"
+    },
+    "designation": "Media Team Member, Outreach and Media Team"
   },
   {
     "name": "Prakhar Chandra",
@@ -133,16 +192,7 @@ export const team = [
     },
     "designation": "Execution Manager, Core Committee"
   },
-  {
-    "name": "Yash Sen",
-    "bio": "My passion is photography and aim is graphic designer.",
-    "profile_picture": "team/yashsen.jpg",
-    "social_links": {
-      "gmail": "sen23@iiserb.ac.in",
-      "linkedin": "https://www.linkedin.com/in/yash-sen-692a032a9"
-    },
-    "designation": "Photography Club Member"
-  },
+  
   {
     "name": "Arpan Jain",
     "bio": "Tech is Life, Life is Tech",
@@ -154,16 +204,7 @@ export const team = [
     },
     "designation": "Core Committee Member"
   },
-  {
-    "name": "Divyam Sood",
-    "bio": "Here be dragons",
-    "profile_picture": "team/divyamsood.jpg",
-    "social_links": {
-      "gmail": "divyam23@iiserb.ac.in",
-      "linkedin": "https://in.linkedin.com/in/divyam-sood-b4618a284"
-    },
-    "designation": "Member, EECS Club"
-  },
+ 
   {
     "name": "Shubham Mohanty",
     "bio": "In a matrix of thoughts, I roam, debugging life, making it home.",
@@ -178,7 +219,7 @@ export const team = [
   {
     "name": "Anay Singh",
     "bio": "Passionate about technology and innovation, with a focus on efficient execution and teamwork.",
-    "profile_picture": "team/anay.jpg",
+    "profile_picture": "https://avatars.githubusercontent.com/anay",
     "social_links": {
       "gmail": "anay23@iiserb.ac.in"
     },
@@ -194,7 +235,7 @@ export const team = [
     },
     "designation": "Community Management Head, Outreach and Media Team"
   },
-  
+
   {
     "name": "Prashant Gupta",
     "bio": "Turning ideas into reality with robotics and tech. That's my style.",
@@ -205,35 +246,30 @@ export const team = [
       "github": "https://github.com/rebelpg"
     },
     "designation": "Event Manager, Core Committee"
-  },
-  {
-    "name": "Yash Maurya",
-    "bio": "I'm passionate about creating beautiful visuals that communicates.",
-    "profile_picture": "team/yashkumar.jpg",
+  }
+];
+
+
+/*
+{
+    "name": "Yash Sen",
+    "bio": "My passion is photography and aim is graphic designer.",
+    "profile_picture": "team/yashsen.jpg",
     "social_links": {
-      "gmail": "yashkumar23@iiserb.ac.in" 
+      "gmail": "sen23@iiserb.ac.in",
+      "linkedin": "https://www.linkedin.com/in/yash-sen-692a032a9"
     },
-    "designation": "Graphic Designer, Core Committee"
+    "designation": "Photography Club Member"
   },
-  {
-    "name": "Pranay Meshram",
-    "bio": "My role is to lead media and content creation part in the council.",
-    "profile_picture": "team/pranay.jpg",
+ {
+    "name": "Divyam Sood",
+    "bio": "Here be dragons",
+    "profile_picture": "team/divyamsood.jpg",
     "social_links": {
-      "gmail": "pranay23@iiserb.ac.in",
-      "linkedin": "https://www.linkedin.com/in/pranay-meshramiiserb",
-      "github": "https://github.com/PranMesh"
+      "gmail": "divyam23@iiserb.ac.in",
+      "linkedin": "https://in.linkedin.com/in/divyam-sood-b4618a284"
     },
-    "designation": "Content Creation Head, Core Committee"
-  },
-  {
-    "name": "Sankalp Jangam",
-    "bio": "Exploring new experiences.",
-    "profile_picture": "team/sankalp.jpg",
-    "social_links": {
-      "gmail": ""
-    },
-    "designation": "Coordinator, Gaming Club"
+    "designation": "Member, EECS Club"
   },
   {
     "name": "Agolika Balasubramanian",
@@ -245,4 +281,49 @@ export const team = [
     },
     "designation": "Member, EECS Club"
   }
-];
+{
+  "name": "Agolika Balasubramanian",
+  "bio": "Exploring, learning, mastering.",
+  "profile_picture": "team/agolika.jpg",
+  "social_links": {
+    "gmail": "agolika23@iiserb.ac.in",
+    "linkedin": "https://www.linkedin.com/in/agolika-bm-523b99282?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+  },
+  "designation": "Member, EECS Club"
+},
+{
+  "name": "Kashish Meena",
+  "bio": "I am the content creator in the EECS club.",
+  "profile_picture": "team/kashishmeena.jpg",
+  "social_links": {
+    "gmail": "kashish22@iiserb.ac.in",
+    "linkedin": "https://www.linkedin.com/in/kashish-meena-04733325b/"
+  },
+  "designation": "Club Member, EECS Club"
+},
+{
+  "name": "Ridhika Mishra",
+  "bio": "",
+  "profile_picture": "team/ridhika.jpg",
+  "social_links": {
+    "gmail": "ridhika23@iiserb.ac.in"
+  },
+  "designation": "Member, EECS Club"
+}
+,
+
+{
+  "name": "Arijit Mondal",
+  "bio": "Driven individual who focuses on results and works under pressure.",
+  "profile_picture": "team/arijitmondal.jpg",
+  "social_links": {
+    "gmail": "arijit22@iiserb.ac.in",
+    "github": "https://github.com/Arijit20031",
+    "linkedin": "https://www.linkedin.com/in/arijit-mandal-081361249"
+  },
+  "designation": "Team Member, EECS Club"
+},
+
+
+
+ */
