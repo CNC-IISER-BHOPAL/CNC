@@ -25,11 +25,11 @@ To get a copy of the CNC website up and running on your local machine, follow th
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/<your-username>/cnc-website.git
+    git clone https://github.com/<your-username>/CNC.git
     ```
 2. **Navigate to the project directory**:
     ```bash
-    cd cnc-website
+    cd CNC
     ```
 3. **Install dependencies**:
     ```bash
@@ -45,7 +45,7 @@ We welcome contributions to improve the CNC website! If you'd like to contribute
 1. **Fork the repository** by clicking the "Fork" button on the top right of this repository.
 2. Clone your forked repository:
     ```bash
-    git clone https://github.com/<your-username>/cnc.git
+    git clone https://github.com/<your-username>/CNC.git
     ```
 3. Create a new branch:
     ```bash
