@@ -25,12 +25,13 @@ export default function Home() {
 
   const animateref = useRef(null);
   const animateInView = useInView(ref, { once: true });
+  
+  
   return (
-    <div className="  w-full    z-[2]  relative">
+    <div className="z-[2] relative">
       <Gradients />
       <BackgroundGrid />
-
-      <div className='absolute    lg:p-12 min-h-screen  lg:p-24 top-0 left-0 w-full '>
+      <div className='absolute overflow-hidden    lg:p-12 min-h-screen  lg:p-24 top-0 left-0 w-full '>
         <div className="flex min-h-[80vh]   pointer-events-none  flex-col items-center justify-center">
           <Wrapper>
             <motion.p
@@ -59,18 +60,9 @@ export default function Home() {
             />
           </Wrapper>
         </div>
-
         <Ethos />
-
         <VideoPlayer />
-
-
-
-
-
         <div className='w-full pointer-events-auto  relative p-6 lg:p-12 mt-24 '>
-
-
           <h1 className='text-5xl md:text-6xl font-semibold text-[#2F80ED] flex items-center gap-4'>
             Clubs Under Us
           </h1>
@@ -168,18 +160,18 @@ const Overlay = () => {
 
 
 const Clubs = ({ clubName, clubMotto, clubCoordinators, clubAbstract, clubLink, clubLogo }) => {
-  
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  
+
   return (
 
-    <motion.div 
-    ref={ref}
-    initial={{ opacity: 0.4 }}
-    animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 100 }}
-    transition={{ duration: 0.5 }}
-    className='py-12 z-[999]   grid mt-12 pointer-events-auto  grid-cols-1 md:grid-cols-3 justify-between'>
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0.4 }}
+      animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 100 }}
+      transition={{ duration: 0.5 }}
+      className='py-12 z-[999]   grid mt-12 pointer-events-auto  grid-cols-1 md:grid-cols-3 justify-between'>
       {/* Club Logo */}
       <img
         src={clubLogo}
@@ -227,13 +219,13 @@ const VideoPlayer = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <motion.div 
-    ref={ref}
-    initial={{ opacity: 0.4 }}
-    animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100, scale: isInView ? 1 : 0.7 }}
-    transition={{ duration: 0.5 }}
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0.4 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100, scale: isInView ? 1 : 0.7 }}
+      transition={{ duration: 0.5 }}
 
-    className='w-full flex relative items-center flex-col  justify-center p-12'>
+      className='w-full flex relative items-center flex-col  justify-center p-12'>
       <div className='absolute h-[200px] w-[200px] bg-blue-500 top-24 blur-[200px] rounded-full' />
       <p className=' mb-2 mt-24 text-[9px] md:text-sm text-center lg:text-md text-blue-400 bg-white/20 rounded-full p-1 md:p-2 px-4 backdrop-blur-[10px] '>We Organize Tomorrow’s Tech Innovations Today</p>
       <h1 className='text-5xl lg:text-7xl text-center font-semibold  mb-12 bg-gradient-to-t from-blue-200 to-white  text-transparent bg-clip-text p-3'>Armageddon Techfest</h1>

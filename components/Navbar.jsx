@@ -16,7 +16,7 @@ export default function NavigationBar() {
 
     ];
     return (<>
-        <div className="w-full px-6  flex items-center justify-between py-6  absolute top-0 left-0">
+        <div className="w-full px-6 overflow-hidden  flex items-center justify-between py-6  absolute top-0 left-0">
             <Navbar maxWidth="full"
                 className="z-[999999]"
                 onMenuOpenChange={setIsMenuOpen} isBlurred={true}>
@@ -24,12 +24,12 @@ export default function NavigationBar() {
                     <NavbarContent>
                         <NavbarMenuToggle
                             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                            className="sm:hidden z-[99999999]"
+                            className="hidden z-[99999999]"
                         />
                         <NavbarBrand>
                             <div className="flex gap-2 font-semibold items-center">
                                 <img
-                                    src="/cnc-grey.png"
+                                    src="cnc/cnc-grey.png"
                                     className="h-12 logo"
                                 />
 
@@ -59,11 +59,11 @@ export default function NavigationBar() {
                                 Team
                             </Link>
                         </NavbarItem>
-                        <NavbarItem className="">
+                        {/* <NavbarItem className="">
                             <Link href="#">
                                 Contact Us
                             </Link>
-                        </NavbarItem>
+                        </NavbarItem> */}
                     </NavbarContent>
                 </Wrapper>
                 <Wrapper >
@@ -82,7 +82,7 @@ export default function NavigationBar() {
                         </div>
                     </NavbarContent>
                 </Wrapper>
-                <NavbarMenu >
+                <NavbarMenu className="z-[9999999]">
                     {menuItems.map((item, index) => (
                         <NavbarMenuItem key={`${item}-${index}`}>
                             <Link
