@@ -45,16 +45,16 @@ export default function Arbitrage() {
             <h1 className="text-6xl z-[999] ">Claude Glass</h1>
           </div>
           <p className="italic mt-12 ">
-            At IISER Bhopal’s Photography Club, we capture the beauty of
+            At IISER Bhopal&apos;s Photography Club, we capture the beauty of
             science, nature, and everyday moments through the lens. Whether
-            you're a seasoned photographer or just starting out, the club offers
+            you&apos;re a seasoned photographer or just starting out, the club offers
             a dynamic space to learn, create, and share.
             <br />
             <br />
             From photo walks to workshops, we explore the art of storytelling
             through images. Join us to frame the world in new and exciting ways,
-            one shot at a time! "One lens, one world—creativity revealing the
-            unfiltered essence"
+            one shot at a time! &apos;One lens, one world—creativity revealing the
+            unfiltered essence&apos;
           </p>
           <h1 className="text-6xl mt-24">🏆 Our Major Events</h1>
           <ul className="mt-12 ml-24 text-lg list-disc ">
@@ -91,16 +91,16 @@ export default function Arbitrage() {
           <h1 className="text-6xl mt-24">🫂 Our Club Members</h1>
           <ul className="mt-12 ml-24 text-lg list-disc">
             <li>Ahwan Nandi</li>
-            <li>Vartika chauhan </li>
+            <li>Vartika Chauhan </li>
             <li>Satvik</li>
-            <li>Yash sen</li>
+            <li>Yash Sen</li>
             <li>Hrithik</li>
-            <li>Sampreeti das</li>
-            <li>Anadi gupta</li>
-            <li>Divyanshu meshram</li>
+            <li>Sampreeti Das</li>
+            <li>Anadi Gupta</li>
+            <li>Divyanshu Meshram</li>
             <li>Akshay</li>
             <li>Darshan</li>
-            <li>Divyan pal</li>
+            <li>Divyan Pal</li>
             <li>Dev</li>
             <li>Neelesh</li>
           </ul>
