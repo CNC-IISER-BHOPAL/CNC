@@ -22,8 +22,7 @@ const InstagramCard = ({ data }) => {
           animate={{ opacity: 1 }}
           className="shadow-xl z-[-10] transition-all duration-500  mt-24 p-12 min-w-[500px] max-w-[570px] min-h-[80vh] lg:min-h-[75vh] text-black relative text-center  bg-white rounded-[24px] "
         >
-
-          <div className="z-[-1] h-[300px] w-[300px] bg-gradient-to-br from-violet-500 to-teal-500 top-[180px] rounded-full absolute blur-[50px]" />
+          <div className="z-[-1] h-[400px] w-[400px] bg-gradient-to-br from-pink-500 to-yellow-500 top-[100px] rounded-full absolute blur-[70px]" />
           <Image
             src={data.logo}
             alt={"cc"}

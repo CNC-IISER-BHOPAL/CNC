@@ -21,7 +21,7 @@ export default function Arbitrage() {
       ],
       social: [
         {
-          instagram: "/insta",
+          instagram: "",
           linkedin: "",
           discord: "",
           linktree: "",

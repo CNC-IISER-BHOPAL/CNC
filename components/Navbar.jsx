@@ -46,13 +46,13 @@ export default function NavigationBar() {
                                 Home
                             </Link>
                         </NavbarItem>
-                        {/* <NavbarItem>
+                        <NavbarItem>
                             <Link
                                 className="cursor-pointer z-[99999999]"
-                                href="/clubs" >
+                                href="#clubs" >
                                 Clubs
                             </Link>
-                        </NavbarItem> */}
+                        </NavbarItem>
 
                         <NavbarItem >
                             <Link href="/team" >

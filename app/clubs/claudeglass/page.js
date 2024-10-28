@@ -22,8 +22,7 @@ export default function Arbitrage() {
       social: [
         {
           instagram: "https://www.instagram.com/claude__glass/?hl=en",
-          linkedin:
-            "https://www.linkedin.com/company/photography-club-iiser-bhopal/",
+          linkedin:"https://www.linkedin.com/company/photography-club-iiser-bhopal/",
           discord: "",
           linktree: "https://linktr.ee/rash6",
         },

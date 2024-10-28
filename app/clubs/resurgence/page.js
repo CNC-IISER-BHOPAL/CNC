@@ -44,9 +44,7 @@ export default function Arbitrage() {
             />
             <h1 className="text-6xl z-[999] ">Resurgence</h1>
           </div>
-          <p className="italic mt-12 w-[70%] ">
-            -
-          </p>
+          <p className="italic mt-12 w-[70%] ">-</p>
           <h1 className="text-6xl mt-24">🏆 Our Major Events</h1>
           <ul className="mt-12 ml-24 text-lg list-disc">None Yet!</ul>
           <h1 className="text-6xl mt-24">🫂 Our Club Members</h1>

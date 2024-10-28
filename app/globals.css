@@ -6,7 +6,9 @@
 :root {
     --background: #0a0a0a;
     --foreground: #ffffff;
+    scroll-behavior: smooth;
 }
+
 
 body::-webkit-scrollbar {
     width: 0.8em;
