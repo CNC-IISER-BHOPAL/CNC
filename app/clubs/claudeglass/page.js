@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Arbitrage() {
   const data = [
     {
-      logo: "/photography.jpg",
+      logo: "cnc/photography.jpg",
       instahandle: "CLAUDE_GLASS",
       title: "Claude Glass, IISER Bhopal",
       description: "Official Photography Club of IISER Bhopal",

@@ -18,7 +18,7 @@ export default function NavigationBar() {
     return (<>
         <div className="w-full px-6 overflow-hidden  flex items-center justify-between py-6  absolute top-0 left-0">
             <Navbar maxWidth="full"
-                className="z-[999999]"
+                className="z-[999999] border border-white/10 shadow-lg rounded-md py-4"
                 onMenuOpenChange={setIsMenuOpen} isBlurred={true}>
                 <Wrapper >
                     <NavbarContent>
@@ -28,9 +28,12 @@ export default function NavigationBar() {
                         />
                         <NavbarBrand>
                             <div className="flex gap-2 font-semibold items-center">
-                                <img
-                                    src="cnc/cnc-grey.png"
-                                    className="h-12 logo"
+                                <Image
+                                    height={24}
+                                    width={24}
+                                    alt="logo"
+                                    src="cnc-grey.png"
+                                    className="object-contain logo"
                                 />
 
                             </div>
@@ -41,15 +44,15 @@ export default function NavigationBar() {
                 >
                     <NavbarContent className="hidden sm:flex gap-8" justify="center">
 
-                        <NavbarItem >
-                            <Link href="/" >
+                        <NavbarItem  >
+                            <Link href="/" className=" ">
                                 Home
                             </Link>
                         </NavbarItem>
                         <NavbarItem>
                             <Link
                                 className="cursor-pointer z-[99999999]"
-                                href="#clubs" >
+                                href="/#clubs" >
                                 Clubs
                             </Link>
                         </NavbarItem>
@@ -70,13 +73,13 @@ export default function NavigationBar() {
                     <NavbarContent justify="end">
                         <div className="flex gap-4 items-center">
                             <Link href={'https://www.instagram.com/cnc_iiserb/'} target="_blank">
-                                <FaInstagram className="size-[20px] hover:scale-110 transition duration-500 hover:rotate-[30deg]"/>
+                                <FaInstagram className="size-[20px] hover:scale-110 transition duration-500 hover:rotate-[30deg]" />
                             </Link>
                             <Link href={'https://www.linkedin.com/company/cnc-iiser-bhopal/mycompany/'} target="_blank">
-                                <FaLinkedinIn className="size-[20px] hover:scale-110 transition duration-500 hover:rotate-[30deg]"/>
-                                </Link>
+                                <FaLinkedinIn className="size-[20px] hover:scale-110 transition duration-500 hover:rotate-[30deg]" />
+                            </Link>
                             <Link href={'https://github.com/CNC-IISER-BHOPAL'} target="_blank">
-                                <FaGithub className="size-[20px] hover:scale-110 transition duration-500 hover:rotate-[30deg]"/>
+                                <FaGithub className="size-[20px] hover:scale-110 transition duration-500 hover:rotate-[30deg]" />
                             </Link>
 
                         </div>

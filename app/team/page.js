@@ -3,12 +3,13 @@
 import { Gradients } from "@/app/page";
 import Tile from "@/components/Tile";
 import Image from "next/image";
-import { team } from "@/data/teamData";
+import { data, people } from "@/data/teamData";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { BsThreeDots } from "react-icons/bs";
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import Link from "next/link";
 
 
 export default function Team() {
@@ -33,27 +34,80 @@ export default function Team() {
                         </motion.h1>
                     </div>
 
+
+
                     <motion.div
-                        className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-2 lg:gap-12 mt-12"
+                        className="grid   mt-12"
                         variants={containerVariants}
                         initial="hidden"
                         animate="visible"
+
                     >
-                        {team.map((teamMember, id) => (
-                            <TeamMember
-                                key={id}
-                                name={teamMember.name}
-                                bio={teamMember.bio}
-                                designation={teamMember.designation}
-                                social_links={teamMember.social_links}
-                                profile={teamMember.profile_picture}
-                            />
+                                <h1 className="mx-auto text-center text-7xl bg-gradient-to-br from-blue-500 to-cyan-500 text-transparent bg-clip-text font-bold mt-12 mb-12">{"The Council"}</h1>
+
+                        {Object.entries(people).map((team) => (
+                            <>
+                                <h1 className="mt-12 mb-4 font-bold text-5xl">{team[0] == 0 ? "Council Heads" : "Core Committee"}</h1>
+                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-2 lg:gap-12">
+                                    {team[1].map((teamMember) => (
+                                        <>
+
+                                            <TeamMember
+                                                name={teamMember.name}
+                                                bio={teamMember.bio}
+                                                social_links={teamMember.social_links}
+                                                designation={teamMember.designation}
+                                                profile={teamMember.profile_picture}
+                                            />
+                                        </>
+                                    ))}
+                                </div>
+                            </>
                         ))}
                     </motion.div>
+
+
+                    {/* CLUBS and TEAMS */}
+                    {data.map((teams, index) => (
+
+
+                        <>
+
+                            <motion.div
+                                className="grid  gap-y-8 gap-x-2 lg:gap-12 mt-12"
+                                variants={containerVariants}
+                                initial="hidden"
+                                animate="visible"
+
+                            >
+                                <h1 className="mx-auto text-center text-7xl bg-gradient-to-br from-blue-500 to-cyan-500 text-transparent bg-clip-text font-bold">{index === 0 ? "Clubs" : "Teams"}</h1>
+                                {Object.entries(teams).map((team) => (
+                                    <>
+                                        <h1 className="mt-12 font-bold text-5xl">{JSON.stringify(team[0])}</h1>
+                                        <div className="grid  grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-2 lg:gap-12">
+                                            {team[1].map((teamMember) => (
+                                                <>
+
+                                                    <TeamMember
+                                                        name={teamMember.name}
+                                                        bio={teamMember.bio}
+                                                        social_links={teamMember.social_links}
+                                                        designation={teamMember.designation}
+                                                        profile={teamMember.profile_picture}
+                                                    />
+                                                </>
+                                            ))}
+                                        </div>
+                                    </>
+                                ))}
+                            </motion.div>
+                        </>
+                    ))}
                 </div>
             </div>
-        </motion.div>
+        </motion.div >
     )
+
 }
 
 const containerVariants = {
@@ -78,7 +132,7 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
     const [dot, setDot] = useState(false);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
-    
+
     return (
         <motion.div
             ref={ref}
@@ -107,7 +161,7 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
                         className="cursor-pointer absolute right-2 top-2 size-[25px] drop-shadow-lg"
                         onClick={() => setDot(dot => !dot)}
                     />
-                    <Links />
+                    <Links SocialLinks={social_links} />
                 </motion.div>
 
             </div>
@@ -117,6 +171,7 @@ const TeamMember = ({ name, bio, social_links, designation, profile }) => {
                     <h1 className="text-sm md:text-lg text-neutral-300 mt-1">{designation}</h1>
                 </div>
             </div>
+
             <h1 className="font-thin text-xs md:text-sm text-neutral-400 mt-4">{bio}</h1>
         </motion.div>
     );
@@ -138,14 +193,14 @@ const Socialvariants = {
     }
 };
 
-const Links = () => {
+const Links = ({SocialLinks}) => {
     return (
         <motion.div
             variants={Socialvariants}
             className="flex gap-4 absolute items-center justify-center">
-            <BiLogoGmail className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" />
-            <FaLinkedinIn className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" />
-            <FaGithub className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" />
+            <Link target="_blank" href={`mailto:${SocialLinks.gmail}` }><BiLogoGmail className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" /></Link>
+            <Link target="_blank" href={SocialLinks.linkedin}><FaLinkedinIn className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" /></Link>
+            <Link target="_blank" href={SocialLinks.github}><FaGithub className="cursor-pointer drop-shadow-lg mt-2 md:size-[25px] size-[20px]" /></Link>
         </motion.div>
     )
 }

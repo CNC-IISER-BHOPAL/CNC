@@ -78,6 +78,7 @@ body::-webkit-scrollbar {
 
 
 
+
 h1::after {
     content: var(--clubName);
     display: block;
@@ -130,3 +131,22 @@ h1::after {
     left: 0;
     z-index: 2;
 } */
+
+
+.navbarHome{
+    position: relative;
+    overflow:hidden;
+    /* width:40px;
+    height:20px; */
+    /* border: 1px solid red; */
+    transition: transform 0.3s ease-in-out;
+}
+.navbarHome::before{
+    content: 'Home';
+    position: absolute;
+    left:0;
+    top:50px;
+}
+.navbarHome:hover .navbarHome::before{
+    transform: translateY(-50px);
+}

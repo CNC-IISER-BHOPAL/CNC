@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function CyberHeathens() {
   const data = [
     {
-      logo: "/cc.png",
+      logo: "cnc/cc.png",
       instahandle: "CNC_PROGRAMMING_DIVISION",
       title: "CyberHeathens, IISER Bhopal",
       description: "Official Programming Division of IISER Bhopal",

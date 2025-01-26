@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Arbitrage() {
   const data = [
     {
-      logo: "/quant.png",
+      logo: "cnc/quant.png",
       instahandle: "ARBITRAGE",
       title: "Arbitrage, IISER Bhopal",
       description: "Official Quantative Finance Club of IISER Bhopal",

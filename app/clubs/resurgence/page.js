@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function Arbitrage() {
   const data = [
     {
-      logo: "/gaming.png",
+      logo: "cnc/gaming.png",
       instahandle: "RESURGENCE_IISERB",
       title: "Resurgence, IISER Bhopal",
       description: "Official Gaming Club of IISER Bhopal",
