@@ -1,6 +1,9 @@
-# CNC Website - IISER Bhopal
+# Computing and Networking Council Website - IISER Bhopal
 
 Welcome to the official GitHub repository for the **Computer Science and Networking Council (CNC)** of IISER Bhopal! This website serves as a hub for all student activities related to computer science, technology, and networking. CNC encompasses multiple clubs, each focusing on unique interests such as coding, electronics, finance, gaming, and more.
+
+![Screenshot 2024-11-06 110519](https://github.com/user-attachments/assets/5bd75953-596d-4dac-83b2-99bcb1c268de)
+
 
 ## Clubs Under CNC
 - **👨‍💻 Coding Club / Cyberheathens**: Focused on competitive programming, development, and open-source contributions.
@@ -63,4 +66,3 @@ We welcome contributions to improve the CNC website! If you'd like to contribute
 
 ## Contact
 For any inquiries or issues, feel free to reach out via email at [cnc@iiserb.ac.in](mailto:cnc@iiserb.ac.in) or me personally [Tanishq Sharma](mailto:tanishq22@iiserb.ac.in).
-
